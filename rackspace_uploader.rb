@@ -3,8 +3,8 @@ module LJV
   class RackspaceUploader
 
     def initialize(config)
-      @username = config[:username] || raise StandardError, "You must specify a Rackspace username"
-      @apikey = config[:apikey] || raise StandardError, "You must specify a Rackspace API key"
+      @username = config[:username] || (raise StandardError, "You must specify a Rackspace username")
+      @api_key = config[:api_key] || (raise StandardError, "You must specify a Rackspace API key")
       @snet = config[:snet] || false
     end
 
