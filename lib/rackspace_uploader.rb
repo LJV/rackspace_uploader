@@ -5,7 +5,7 @@ module LJV
 
   class RackspaceUploader
 
-    MAX_SEGMENT_SIZE = 1024 * 1024 * 500 # 5 Gigabytes
+    MAX_SEGMENT_SIZE = 1024 * 1024 * 5000 # 5 Gigabytes
     BUFFER_SIZE = 1024 * 1024 # 1 Megabyte
     
     def initialize(config)
