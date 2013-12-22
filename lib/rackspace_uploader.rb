@@ -6,7 +6,7 @@ module LJV
   class RackspaceUploader
 
     MAX_SEGMENT_SIZE = 1024 * 1024 * 5000 # 5 Gigabytes
-    BUFFER_SIZE = 1024 * 1024 # 1 Megabyte
+    BUFFER_SIZE = 1024 * 1024 * 25 # 25 Megabytes
     
     def initialize(config)
       @username = config[:username] || (raise StandardError, "You must specify a Rackspace username")
