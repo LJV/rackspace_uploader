@@ -12,6 +12,7 @@ module LJV
       @username = config[:username] || (raise StandardError, "You must specify a Rackspace username")
       @api_key = config[:api_key] || (raise StandardError, "You must specify a Rackspace API key")
       @snet = config[:snet] || false
+      @region = config[:region] || :ord
     end
 
     def upload(filepath, container_name, object_name)
@@ -57,7 +58,7 @@ module LJV
             :provider            => 'Rackspace',         # Rackspace Fog provider
             :rackspace_username  => @username, # Your Rackspace Username
             :rackspace_api_key   => @api_key,       # Your Rackspace API key
-            :rackspace_region    => :ord,                # Defaults to :dfw
+            :rackspace_region    => @region,
             :connection_options  => {}                   # Optional
         })
       end
