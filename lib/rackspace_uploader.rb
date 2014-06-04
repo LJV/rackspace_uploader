@@ -1,3 +1,8 @@
+# Credit Note
+# I believe The original segment loop with buffer, etc. was inspired/copied from a code snippet
+# added as a comment to a Rackspace knowledge base article, or something like that.  Can't seem to find
+# it now.
+
 require 'fog'
 require 'fileutils'
 
